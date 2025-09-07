@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -129,6 +130,58 @@ namespace TARpv24_C_
             }
             return a;
         }
-        public static string Pikk
+        public static string Pikk (float arv)
+        {
+            string b = "";
+            if (arv < 160)
+            {
+                b = "Olete lühike.";
+            }
+            else if (arv >= 160 && arv <= 180)
+            {
+                b = "Teie pikkus on keskmine.";
+            }
+            else
+            {
+                b = "Olete pikk.";
+            }
+            return b;
+        }
+
+        public static string Sugu( string d)
+        {
+            string b = "";
+            if (d.ToLower() == "mees")
+            {
+                b = "Sinu on sugu mees.";
+            }
+            else
+            {
+                b= "Sinu on sugu naine.";
+            }
+            return b;
+        }
+        public static string Pikk_naine(float arv)
+        {
+            string b = "";
+            if (arv < 160)
+            {
+                b = "Olete lühike.";
+            }
+            else if (arv >= 160 && arv <= 175)
+            {
+                b = "Teie pikkus on keskmine.";
+            }
+            else
+            {
+                b = "Olete pikk.";
+            }
+            return b;
+        }
+        public static float Hind (float m , int  kogus, float l, int kogus2, float s, int kogus3)
+        {
+            float hind = m * kogus + l * kogus2 + s * kogus3;
+            return hind;
+        }
     }
 }
