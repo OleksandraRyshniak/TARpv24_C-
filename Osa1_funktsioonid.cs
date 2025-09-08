@@ -147,7 +147,6 @@ namespace TARpv24_C_
             }
             return b;
         }
-
         public static string Sugu( string d)
         {
             string b = "";
