@@ -8,6 +8,7 @@ namespace TARpv24_C_
         {
             Random rnd = new Random();
             Console.OutputEncoding = Encoding.UTF8;
+
             //3.Osa Massivid, List, Kordused
             //List<string> nimed = new List<string>();
             //for (int i = 0; i < 10; i++)
@@ -22,40 +23,40 @@ namespace TARpv24_C_
             //    Console.WriteLine(nimi);
             //}
             //Massiv
-            int[] arvud = new int[10];
-            int j = 0;
-            while (j<10)
-            {
-                Console.WriteLine(j + 1);
-                arvud[j] = rnd.Next(1,101);
-                j++;
-            }
-            foreach (int arv in arvud)
-            {
-                Console.WriteLine(arv);
-            }
+            //int[] arvud = new int[10];
+            //int j = 0;
+            //while (j<10)
+            //{
+            //    Console.WriteLine(j + 1);
+            //    arvud[j] = rnd.Next(1,101);
+            //    j++;
+            //}
+            //foreach (int arv in arvud)
+            //{
+            //    Console.WriteLine(arv);
+            //}
 
-            List<Isik> isikud = new List<Isik>();
-            j = 0;
-            do
-            {
-                Console.WriteLine(j + 1);
-                Isik isik = new Isik();
-                Console.Write("Eesnimi: ");
-                isik.eesnimi = Console.ReadLine();
-                Console.Write("Perenimi: ");
-                isik.perenimi = Console.ReadLine();
-                isikud.Add(isik);
-                j++;
+            //List<Isik> isikud = new List<Isik>();
+            //j = 0;
+            //do
+            //{
+            //    Console.WriteLine(j + 1);
+            //    Isik isik = new Isik();
+            //    Console.Write("Eesnimi: ");
+            //    isik.eesnimi = Console.ReadLine();
+            //    Console.Write("Perenimi: ");
+            //    isik.perenimi = Console.ReadLine();
+            //    isikud.Add(isik);
+            //    j++;
 
-            } while (j < 5);
-            isikud.Sort((x, y) => x.eesnimi.CompareTo(y.eesnimi));
-            Console.WriteLine($"Kokku on {isikud.Count()} isikud");
-            foreach (Isik isik in isikud)
-            {
-                isik.Prindi_andmed();
-            }
-            Console.WriteLine($"Kolmandal kohal on <{isikud[2].eesnimi}> isik");
+            //} while (j < 5);
+            //isikud.Sort((x, y) => x.eesnimi.CompareTo(y.eesnimi));
+            //Console.WriteLine($"Kokku on {isikud.Count()} isikud");
+            //foreach (Isik isik in isikud)
+            //{
+            //    isik.Prindi_andmed();
+            //}
+            //Console.WriteLine($"Kolmandal kohal on <{isikud[2].eesnimi}> isik");
 
 
 
@@ -327,6 +328,22 @@ namespace TARpv24_C_
             //        Console.WriteLine(e);
             //    }
             //}
+
+
+            Console.WriteLine("Ülesanne 1");
+            int[] arv = Osa3_Funktsioonid.GenereeriRuudud(-100, 100);
+            for(int i =0; i<arv.Length; i++) 
+            {
+                Console.WriteLine(arv[i]);
+            }
+
+            Console.WriteLine("Ülesanne 2");
+            double[] arvud = Osa3_Funktsioonid.Tekstist_arvud();
+            var tulemus = Osa3_Funktsioonid.AnalüüsiArve(arvud);
+            Console.WriteLine($"Summa: {tulemus.Item1:F2}, Keskmine: {tulemus.Item2:F2}, Korrutis: {tulemus.Item3:F2}");
+
+            Console.WriteLine("Ülesanne 3");
+
 
         }
     }
