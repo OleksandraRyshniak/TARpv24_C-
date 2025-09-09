@@ -6,12 +6,6 @@ using System.Threading.Tasks;
 
 namespace TARpv24_C_
 {
-    //Создай класс ArvuTöötlus, в котором есть метод GenereeriRuudud(int min, int max), который выполняет следующее:
-    //Генерирует 2 случайных целых числа в диапазоне[-100, 100], назовём их N и M.
-    //Определяет все целые числа между ними(от меньшего к большему, включая границы).
-    //Возвращает массив, в котором каждое значение — это квадрат соответствующего числа.
-    //В методе Main напечатай все результаты вместе с исходными значениями
-    //(например: "4 → 16").
     internal class Osa3_Funktsioonid
     {
         public static int[] GenereeriRuudud(int min, int max)
@@ -75,9 +69,6 @@ namespace TARpv24_C_
         //возврщает эти значения в виде кортежа Tuple<int, double, Inimene, Inimene>.
         //Пользватель вводит 5 человек(имя и возраст отдельно).
 
-        class  Inimene (string nimi, int vanus)
-        {
-            public static List<Inimene> inimesed 
-        }
+
     }
 }
