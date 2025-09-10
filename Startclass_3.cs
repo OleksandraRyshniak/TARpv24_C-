@@ -85,7 +85,15 @@ namespace TARpv24_C_
                 Console.Write("Nimi: ");
                 inimene.nimi = Console.ReadLine();
                 Console.Write("Vanus: ");
-                inimene.vanus = int.Parse(Console.ReadLine());
+                try
+                {
+                    inimene.vanus = int.Parse(Console.ReadLine());
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Palun sisesta korrektne vanus");
+                    continue;
+                }
                 inimesed.Add(inimene);
                 l++;
             } while (l < 5);

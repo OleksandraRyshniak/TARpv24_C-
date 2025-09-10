@@ -6,7 +6,7 @@
     <RootNamespace>TARpv24_C_</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TARpv24_C_.Startclass</StartupObject>
+    <StartupObject>TARpv24_C_.Startclass_3</StartupObject>
   </PropertyGroup>
 
 </Project>
