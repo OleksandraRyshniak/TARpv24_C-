@@ -121,18 +121,32 @@ namespace TARpv24_C_
             while (vastus.ToLower()=="jah");
             return vas;
         }
-        public static int SuurimNeljarv(int[] arvud)
+        public static int SuurimNeliarv(int[] arvud)
         {
-            for (int i = 0; i < 4; i++)
-            {
-                Console.WriteLine("Sisetsa üks arv: ");
-                int arv = int.Parse(Console.ReadLine());
-                arvud[i] = arv;
-            }
             Array.Sort(arvud);
             Array.Reverse(arvud);
+            int summa = arvud[0] * 1000 + arvud[1] * 100 + arvud[2] * 10 + arvud[3];
+            return summa;
         }
-
-
+        public static string GenereeriKorrutustabel(int ridadeArv, int veergudeArv)
+        {
+            int[,] numbers = new int[ridadeArv, veergudeArv];
+            for (int i = 0; i < ridadeArv; i++)
+            {
+                for (int j = 0; j < veergudeArv; j++)
+                {
+                    numbers[i, j] = (i + 1) * (j + 1);
+                }
+            }
+            for (int i = 0; i < ridadeArv; i++)
+            {
+                for (int j = 0; j < veergudeArv; j++)
+                {
+                    Console.Write($"{numbers[i, j],4}");
+                }
+                Console.WriteLine();
+            }
+            return "Korrutustabel";
+        }
     }
 }
