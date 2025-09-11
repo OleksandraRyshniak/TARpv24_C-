@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Markup;
 
 namespace TARpv24_C_
 {
@@ -59,15 +61,77 @@ namespace TARpv24_C_
             }
             return Tuple.Create(summa, keskmine, korrutis);
         }
-
-        //Создай класс Inimene с полями:
-        //string Nimi(имя)
-        //int Vanus(возраст)
-        //Создай метод Statistika(List<Inimene> inimesed), который:
-        //вычисляет сумму всех возрастов и средний возраст,
-        //находит самого старшего и самого младшего человека,
-        //возврщает эти значения в виде кортежа Tuple<int, double, Inimene, Inimene>.
-        //Пользватель вводит 5 человек(имя и возраст отдельно).
+        public static string KuniMärksõnani(string märksõna)
+        {
+            List<string> vastus = new List<string>();
+            string sõna = "";
+            do
+            {
+                Console.WriteLine("Osta elevant ära!");
+                sõna = Console.ReadLine();
+                vastus.Add(sõna);
+            }
+            while (sõna.ToLower() != märksõna);
+            for (int i = 0; i < vastus.Count; i++)
+                Console.WriteLine($"{i+1}. {vastus[i]}");
+            return "Tubli";
+        }
+        public static string ArvaArv()
+        {
+            Random rnd = new Random();
+            string vastus;
+            string vas = "";
+            do
+            {
+                Console.WriteLine("Kas tahad numbrit ära arvata?");
+                vastus = Console.ReadLine();
+                if (vastus != "jah")
+                {
+                    Console.WriteLine("Mäng lõpeb.");
+                    break;
+                }
+                int arv = rnd.Next(1, 100);
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine("Arva arv: ");
+                    try
+                    {
+                        int kas_arv = int.Parse(Console.ReadLine());
+                        if (kas_arv == arv)
+                        {
+                            vas = "Õige!";
+                            continue;
+                        }
+                        else if (kas_arv < arv)
+                        {
+                            Console.WriteLine("Liiga väike");
+                        }
+                        else if (kas_arv > arv)
+                        {
+                            Console.WriteLine("Liiga suur!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+                Console.WriteLine($"Sa kaotasid. Õige arv {arv}!");
+            }
+            while (vastus.ToLower()=="jah");
+            return vas;
+        }
+        public static int SuurimNeljarv(int[] arvud)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine("Sisetsa üks arv: ");
+                int arv = int.Parse(Console.ReadLine());
+                arvud[i] = arv;
+            }
+            Array.Sort(arvud);
+            Array.Reverse(arvud);
+        }
 
 
     }
