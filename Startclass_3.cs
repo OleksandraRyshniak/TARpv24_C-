@@ -129,55 +129,70 @@ namespace TARpv24_C_
             //    catch (Exception e)
             //    {
             //        i--;
-            //        return "Vale sisend";
-            //    }  
+            //        Console.WriteLine("Vale sisend");
+            //    }
             //}
             //Console.WriteLine(Osa3_Funktsioonid.SuurimNeliarv(arvud));
 
-            Console.WriteLine("Ülesanne 7");
-            while (true)
+            //Console.WriteLine("Ülesanne 7");
+            //while (true)
+            //{
+            //    try
+            //    {
+            //        Console.Write("Sisesta ridade arv (1-10): ");
+            //        int ridade = int.Parse(Console.ReadLine());
+
+            //        if (ridade < 1 || ridade > 10)
+            //        {
+            //            Console.WriteLine("Palun sisesta arv 1-10");
+            //            continue; 
+            //        }
+
+            //        int veergude;
+            //        while (true)
+            //        {
+            //            try
+            //            {
+            //                Console.Write("Sisesta veergude arv (1-10): ");
+            //                veergude = int.Parse(Console.ReadLine());
+
+            //                if (veergude < 1 || veergude > 10)
+            //                {
+            //                    Console.WriteLine("Palun sisesta arv 1-10");
+            //                    continue; 
+            //                }
+
+            //                break; 
+            //            }
+            //            catch
+            //            {
+            //                Console.WriteLine("Vale sisend");
+            //            }
+            //        }
+            //        Console.WriteLine(Osa3_Funktsioonid.GenereeriKorrutustabel(ridade, veergude));
+            //        break; 
+            //    }
+            //    catch
+            //    {
+            //        Console.WriteLine("Vale sisend");
+            //    }
+            //}
+
+            Console.WriteLine("Ülesanne 8");
+
+            string[] nimes = new string[10];
+            for (int i = 0; i < 10; i++)
             {
-                try
-                {
-                    Console.Write("Sisesta ridade arv (1-10): ");
-                    int ridade = int.Parse(Console.ReadLine());
+                Console.WriteLine($"{i+1}. Sisesta nimi: ");
+                string nimi=Console.ReadLine();
+                nimes[i] = nimi;
 
-                    if (ridade < 1 || ridade > 10)
-                    {
-                        Console.WriteLine("Palun sisesta arv 1-10");
-                        continue; 
-                    }
-
-                    int veergude;
-                    while (true)
-                    {
-                        try
-                        {
-                            Console.Write("Sisesta veergude arv (1-10): ");
-                            veergude = int.Parse(Console.ReadLine());
-
-                            if (veergude < 1 || veergude > 10)
-                            {
-                                Console.WriteLine("Palun sisesta arv 1-10");
-                                continue; 
-                            }
-
-                            break; 
-                        }
-                        catch
-                        {
-                            Console.WriteLine("Vale sisend");
-                        }
-                    }
-                    Console.WriteLine(Osa3_Funktsioonid.GenereeriKorrutustabel(ridade, veergude));
-                    break; 
-                }
-                catch
-                {
-                    Console.WriteLine("Vale sisend");
-                }
             }
-
+            Console.WriteLine(Osa3_Funktsioonid.Nimetus(nimes));
+            foreach (string i in nimes)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }

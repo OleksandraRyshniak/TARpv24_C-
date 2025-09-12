@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
@@ -147,6 +149,13 @@ namespace TARpv24_C_
                 Console.WriteLine();
             }
             return "Korrutustabel";
+        }
+        public static string Nimetus(string[] nimi)
+        {
+            nimi[2] = "Kati";
+            nimi[5] = "Mati";
+            return ($"3. {nimi[2]} ja 6. {nimi[5]}");
+
         }
     }
 }
