@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TARpv24_C#", "TARpv24_C#.csproj", "{F36AE4D2-C787-42B0-ADC3-DC7C4F426213}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Põhikonstruktsioonid_1", "Põhikonstruktsioonid_1.csproj", "{F36AE4D2-C787-42B0-ADC3-DC7C4F426213}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

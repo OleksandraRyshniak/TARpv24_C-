@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TARpv24_C_
+namespace Põhikonstruktsioonid_1
 {
     internal class Osa1_funktsioonid
     {

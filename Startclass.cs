@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace TARpv24_C_
+namespace Põhikonstruktsioonid_1
 {
     internal class Startclass
     {

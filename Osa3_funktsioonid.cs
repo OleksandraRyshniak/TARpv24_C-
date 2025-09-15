@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
 
-namespace TARpv24_C_
+namespace Põhikonstruktsioonid_1
 {
     internal class Osa3_Funktsioonid
     {
